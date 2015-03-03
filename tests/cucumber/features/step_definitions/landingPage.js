@@ -22,16 +22,19 @@ module.exports = function () {
     }
   });
 
+  // SETUP
   this.Given(/^I am a new visitor$/, function (callback) {
     callback();
   });
 
+  // EXECUTE
   this.When(/^I navigate to the landing page$/, function (callback) {
     helper.world.browser.
       url(helper.world.mirrorUrl).
       call(callback);
   });
 
+  // VERIFY
   this.Then(/^I see the heading "([^"]*)"$/, function (expectedHeading, callback) {
     helper.world.browser.
       getText('h1', function (error, actualHeading) {
