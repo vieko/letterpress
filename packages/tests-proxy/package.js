@@ -7,4 +7,6 @@ Package.describe({
 
 Package.onUse(function (api) {
 	api.use("coffeescript", ["client", "server"]);
+	api.add_files("tests/jasmine/client/integration/landingPageSpec.js",["client"]);
+	api.add_files("tests/jasmine/server/integration/settingsSpec.js",["server"]);
 });
